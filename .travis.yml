@@ -2,4 +2,4 @@ language: java
 script: mvn clean install
 deploy:
   provider: script
-  script: deploy.sh
+  script: sh deploy.sh
