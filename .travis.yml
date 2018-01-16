@@ -6,3 +6,10 @@ jobs:
     deploy:
       provider: script
       script: sh deploy.sh
+  include:
+    -stage: deploy
+    language: java
+    script: mvn clean install
+    deploy:
+      provider: script
+      script: sh deploy.sh
