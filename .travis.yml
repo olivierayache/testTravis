@@ -3,3 +3,8 @@ script: mvn clean install
 deploy:
   provider: script
   script: sh deploy.sh
+jobs:
+  include:
+    if: tag
+    - script: sh deploy.sh
+    - script: sh deploy.sh
