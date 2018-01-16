@@ -1,10 +1,8 @@
-language: java
-script: mvn clean install
-deploy:
-  provider: script
-  script: sh deploy.sh
 jobs:
   include:
-    if: tag = v1
-    - script: sh deploy.sh
-    - script: sh deploy.sh
+    - stage: deploy
+    language: java
+    script: mvn clean install
+    deploy:
+      provider: script
+      script: sh deploy.sh
