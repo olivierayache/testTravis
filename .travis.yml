@@ -3,6 +3,7 @@ jobs:
   include:
     - stage: test
       script: mvn clean install
+    -  
       script: mvn clean install -U
       deploy:
         provider: script
