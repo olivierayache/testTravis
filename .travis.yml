@@ -2,9 +2,6 @@ language: java
 jobs:
   include:
     - stage: test
-      script: mvn clean install
+      script: mvn clean install && sh deploy.sh
     -  
-      script: mvn clean install -U
-      deploy:
-        provider: script
-        script: sh deploy.sh
+      script: mvn clean install -U  && sh deploy.sh
