@@ -2,6 +2,11 @@ os:
   - linux
   - osx
 language: java
+addons:
+  homebrew:
+    update: true
+    packages:
+      - ant@1.9
 jobs:
   include:
     - stage: test
